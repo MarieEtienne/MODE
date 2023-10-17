@@ -202,7 +202,8 @@ template: SIR
   - Prediction of the probability of extinction due to a disease (mutation, ....)
   
 --
-## A very first simple model 
+
+## A very first simple SI model 
 
    - discrete time SI model
    - back to the S compartment in one time generation (back to S compartment)
@@ -211,10 +212,10 @@ template: SIR
 At time 0,  $I(0)=1$ and $S(0)=5$
 
 --
-* Why is it $(I(n), n\geq 1=$ a Markov chain?
-* What is the state space
-* Write the transition matrix and the initial probability
-* Is there a stationnary distribution ? 
+* Why is it $(I(t), t\geq 0)$ a Markov chain?
+* What is the state space ?
+* Write the transition matrix and the initial probability.
+* Is there a stationary distribution ? 
 
 
 ---
@@ -225,7 +226,7 @@ template: SIR
  
    - discrete time SIR model
    - recovering in one time generation
-   - every infected individual has a probability $p$ to infect a susceptible.
+   - every infected individual has a probability $pI$ to infect a susceptible.
    
    
 * How to model the dynamic ? 
@@ -233,7 +234,7 @@ template: SIR
 * Write a R function  to simulate this Markov chain with parameter $pI$ and $nGen$,
 * How to numerically get the stationary distribution if it exists 
 
-$N = 200,$ $I(0) \mathcal{sim} Unif(\left\lbrace{1,2, ....30}\right\rbrace), R(0)=0,$ $pI = 0.02$
+$N = 200,$ $I(0) \sim \mathcal{U}nif(\left\lbrace{1,2, ....30}\right\rbrace), R(0)=0,$ $pI = 0.02$
 
 * Distribution of $I(1)$ ?
 
