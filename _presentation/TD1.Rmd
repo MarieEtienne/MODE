@@ -17,20 +17,6 @@ knitr::opts_chunk$set(echo = FALSE)
 require(ggplot2)
 ```
 
-```{r, load_refs, include=FALSE, cache=FALSE}
-## References with Xringan mode
-library(RefManageR)
-BibOptions(check.entries = FALSE,
-           bib.style = "authoryear",
-           cite.style = "alphabetic",
-           style = "markdown",
-           hyperlink = FALSE,
-           dashed = FALSE)
-myBib <- ReadBib("epidemio.bib", check = FALSE)
-```
-
-
-
 
 # Compartmental models in epidemiology
 
