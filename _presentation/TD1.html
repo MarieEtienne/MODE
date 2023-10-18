@@ -245,7 +245,7 @@ template: SIR
 
 ## Link between stochastic and deterministic SIR model : the  Reed and Frost example
 
-`$$S_{t+1}\sim \mathcal{B}in(S_t, (1-p_I)^{I_t})$$`
+$$ S_t - S_{t+1}\sim \mathcal{B}in(S_t, (1-p_I)^{I_t})$$
 
 Then 
 
@@ -298,11 +298,11 @@ template: SIR
 
 ## Link between stochastic and deterministic SIR model : the  Reed and Frost example
 
-`$$S_{t+1}\sim \mathcal{B}in(S_t, (1-p_I)^{I_t})$$`
+`$$S_t - S_{t+1}\sim \mathcal{B}in(S_t, (1-p_I)^{I_t})$$`
 `$$R_{t+1}-R_t\sim \mathcal{B}in(I_t, p_R)$$`
 
 Then 
-`$$\mathbb{E}(S_{t+1}-S_t) = S_t \left[(1-p_I)^{I_t}- 1\right],\quad \mathbb{E}(R_{t+1}-R_t) = I_t p_R$$`
+`$$\mathbb{E}(S_{t+1}-S_t) = - S_t \left[(1-p_I)^{I_t}- 1\right],\quad \mathbb{E}(R_{t+1}-R_t) = I_t p_R$$`
 
 --
 
@@ -315,10 +315,7 @@ Therefore, by analogy
 # Waiting time  on the bird feeder
 .pull-left[
   
-&lt;div class="figure"&gt;
-&lt;img src="Large-bird-feeder-510x765.jpg" alt="bird feeder" width="200px" /&gt;
-&lt;p class="caption"&gt;bird feeder&lt;/p&gt;
-&lt;/div&gt;
+&lt;img src="Large-bird-feeder-510x765.jpg" width="200px" /&gt;
 We assume that every second a bird stays on the feeder with  probability `\(p_F\)` and leaves with probability `\(1-p_F\)`. 
 
 At every second a new bird arrives with probability `\(p_A\)` and left if no spot is available.

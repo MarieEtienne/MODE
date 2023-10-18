@@ -287,7 +287,7 @@ template: SIR
 
 ## Link between stochastic and deterministic SIR model : the  Reed and Frost example
 
-$$S_{t+1}\sim \mathcal{B}in(S_t, (1-p_I)^{I_t})$$
+$$ S_t - S_{t+1}\sim \mathcal{B}in(S_t, (1-p_I)^{I_t})$$
 
 Then 
 
@@ -353,11 +353,11 @@ template: SIR
 
 ## Link between stochastic and deterministic SIR model : the  Reed and Frost example
 
-$$S_{t+1}\sim \mathcal{B}in(S_t, (1-p_I)^{I_t})$$
+$$S_t - S_{t+1}\sim \mathcal{B}in(S_t, (1-p_I)^{I_t})$$
 $$R_{t+1}-R_t\sim \mathcal{B}in(I_t, p_R)$$
 
 Then 
-$$\mathbb{E}(S_{t+1}-S_t) = S_t \left[(1-p_I)^{I_t}- 1\right],\quad \mathbb{E}(R_{t+1}-R_t) = I_t p_R$$
+$$\mathbb{E}(S_{t+1}-S_t) = - S_t \left[(1-p_I)^{I_t}- 1\right],\quad \mathbb{E}(R_{t+1}-R_t) = I_t p_R$$
 
 --
 
@@ -370,7 +370,7 @@ $$\beta\approx p_I \quad \mbox{and}\quad \gamma=p_R$$
 # Waiting time  on the bird feeder
 .pull-left[
   
-```{r bird_feeder, out.width = "200px", fig.cap='bird feeder'}
+```{r bird_feeder, out.width = "200px"}
 knitr::include_graphics("Large-bird-feeder-510x765.jpg")
 ```
 We assume that every second a bird stays on the feeder with  probability $p_F$ and leaves with probability $1-p_F$. 
