@@ -1,0 +1,68 @@
+---
+title: "TD2 - Movement Ecology models"
+author: "Marie-Pierre Etienne"
+date: "October, 2023"
+output: 
+  xaringan::moon_reader:
+  css: [  'metropolis', 'hygge', 'mpe_pres.css']
+lib_dir: libs
+nature:
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+---
+  
+  ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(ggplot2)
+```
+
+# Four classical movement models
+We denote by $X_k$ the position at time $t_k$ et $V_k$ the velocity.
+
+## Random walk on $\mathbb{R}^2$
+
+$$X_{k+1} = X_k + \varepsilon_{k+1}, \quad (\varepsilon_{k}) Normal i.i.d random noise$$
+  
+## Auto regressive Model on $\mathbb{R}^2$ - Central place behaviour
+
+$$X_{k+1} =\mu +  \rho (X_k - \mu)  + \varepsilon_{k+1}, \quad (\varepsilon_{k}) Normal i.i.d random noise$$
+  
+## Integrated Random walk 
+  
+$$V_{k+1} = V_k + \varepsilon_{k+1}, X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}\quad (\varepsilon_{k}) Normal i.i.d random noise$$
+  
+## Integrated Correlated Random walk 
+  
+$$V_{k+1} = \mu + \rho(V_k-\mu) + \varepsilon_{k+1}, X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}\quad (\varepsilon_{k}) Normal i.i.d random noise$$
+  
+  
+# Four classical movement models - simulation
+
+Write 4 functions to simulate this movement model, and compare for the same level of noise, starting from $(0,0)$ the first time the distance to $(0,0)$ exceeds $25$,
+
+Change the value of $\mu$ to measure its impact.
+
+# How to integrate the landscape ?
+
+* A natural barrier
+
+* A jaguar in a cage, how to deal with the limits of the cage ? What does it change for the stationnary distribution ?
+
+.pull-left[
+
+* a spatiallly structure covariate]
+
+.pull-right[
+
+```{r}
+library(geoR)
+library(tidyverse)
+pred.grid <-  expand.grid(x=seq(-20,20, l=51), y=seq(-20,20, l=51))
+sim <- grf(grid = pred.grid,  cov.pars=c(10, 8))  ##param variand and portee
+cov_data <- sim[[1]] %>% 
+  as_tibble() %>% 
+  mutate(cov1 = sim[[2]])  
+image(sim)
+```
+]
