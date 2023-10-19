@@ -35,7 +35,7 @@ $$V_{k+1} = V_k + \varepsilon_{k+1},\quad  X_{k+1} = X_k +  V_{k+1} + \nu_{k+1},
   
 ## Integrated Correlated Random walk 
   
-$$V_{k+1} = \mu + \rho(V_k-\mu) + \varepsilon_{k+1}, X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$
+$$V_{k+1} = \mu - \rho(V_k-\mu) + \varepsilon_{k+1}, X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$
 ---
   
 # Two classical movement models - simulation
@@ -59,7 +59,7 @@ Change the value of $\mu$ to measure its impact.
 
 .pull-right[
 
-```{r, include=FALSE}
+```{r, message=FALSE, warning=FALSE}
 library(geoR)
 library(tidyverse)
 pred.grid <-  expand.grid(x=seq(-20,20, l=51), y=seq(-20,20, l=51))

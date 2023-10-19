@@ -40,7 +40,7 @@ We denote by `\(X_k\)` the position at time `\(t_k\)` et `\(V_k\)` the velocity.
   
 ## Integrated Correlated Random walk 
   
-`$$V_{k+1} = \mu + \rho(V_k-\mu) + \varepsilon_{k+1}, X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$`
+`$$V_{k+1} = \mu - \rho(V_k-\mu) + \varepsilon_{k+1}, X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$`
 ---
   
 # Two classical movement models - simulation
@@ -65,6 +65,16 @@ Change the value of `\(\mu\)` to measure its impact.
 .pull-right[
 
 
+```
+## grf: simulation on a set of locations provided by the user
+## grf: process with  1  covariance structure(s)
+## grf: nugget effect is: tausq= 0 
+## grf: covariance model 1 is: exponential(sigmasq=10, phi=8)
+## grf: simulation using the function GaussRF from package RandomFields 
+## grf: End of simulation procedure. Number of realizations: 1
+```
+
+![](TD2_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
 ]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
