@@ -23,19 +23,19 @@ We denote by $X_k$ the position at time $t_k$ et $V_k$ the velocity.
 
 ## Random walk on $\mathbb{R}^2$
 
-$$X_{k+1} = X_k + \varepsilon_{k+1},  \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$
+$$X_{k+1} - X_k =  \varepsilon_{k+1},  \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$
   
 ## Auto regressive Model on $\mathbb{R}^2$ - Central place behaviour
 
-$$X_{k+1} =\mu -  \rho (X_k - \mu)  + \varepsilon_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$
+$$X_{k+1} - X_k =  \rho (X_k - \mu)  + \varepsilon_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$
   
 ## Integrated Random walk 
   
-$$V_{k+1} = V_k + \varepsilon_{k+1},\quad  X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2), \quad (\nu_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\tau^2)$$
+$$V_{k+1}- V_k  = \varepsilon_{k+1},\quad  X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2), \quad (\nu_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\tau^2)$$
   
 ## Integrated Correlated Random walk 
   
-$$V_{k+1} = \mu - \rho(V_k-\mu) + \varepsilon_{k+1}, X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$
+$$V_{k+1} - V_k  = - \rho(V_k-\mu) + \varepsilon_{k+1}, X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$
 ---
   
 # Two classical movement models - simulation
