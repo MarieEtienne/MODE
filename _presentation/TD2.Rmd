@@ -23,7 +23,7 @@ We denote by $X_k$ the position at time $t_k$ et $V_k$ the velocity.
 
 ## Random walk on $\mathbb{R}^2$
 
-$$X_{k+1} = X_k + \varepsilon_{k+1}, \quad (\varepsilon_{k}) Normal i.i.d random noise$$
+$$X_{k+1} = X_k + \varepsilon_{k+1},  \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$
   
 ## Auto regressive Model on $\mathbb{R}^2$ - Central place behaviour
 
@@ -52,14 +52,14 @@ Change the value of $\mu$ to measure its impact.
 * A natural barrier
 
 * A jaguar in a cage, how to deal with the limits of the cage ? What does it change for the stationnary distribution ?
-
+--
 .pull-left[
 
 * a spatiallly structure covariate]
 
 .pull-right[
 
-```{r}
+```{r, include=FALSE}
 library(geoR)
 library(tidyverse)
 pred.grid <-  expand.grid(x=seq(-20,20, l=51), y=seq(-20,20, l=51))
