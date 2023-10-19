@@ -27,20 +27,20 @@ $$X_{k+1} = X_k + \varepsilon_{k+1}, \quad (\varepsilon_{k}) Normal i.i.d random
   
 ## Auto regressive Model on $\mathbb{R}^2$ - Central place behaviour
 
-$$X_{k+1} =\mu +  \rho (X_k - \mu)  + \varepsilon_{k+1}, \quad (\varepsilon_{k}) Normal i.i.d random noise$$
+$$X_{k+1} =\mu +  \rho (X_k - \mu)  + \varepsilon_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$
   
 ## Integrated Random walk 
   
-$$V_{k+1} = V_k + \varepsilon_{k+1}, X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}\quad (\varepsilon_{k}) Normal i.i.d random noise$$
+$$V_{k+1} = V_k + \varepsilon_{k+1},\quad  X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2), \quad (\nu_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\tau^2)$$
   
 ## Integrated Correlated Random walk 
   
-$$V_{k+1} = \mu + \rho(V_k-\mu) + \varepsilon_{k+1}, X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}\quad (\varepsilon_{k}) Normal i.i.d random noise$$
+$$V_{k+1} = \mu + \rho(V_k-\mu) + \varepsilon_{k+1}, X_{k+1} = X_k +  V_{k+1} + \nu_{k+1}, \quad (\varepsilon_{k}) \overset{i.i.d}{\sim}\mathcal{N}(0,\sigma^2)$$
   
   
-# Four classical movement models - simulation
+# Twi classical movement models - simulation
 
-Write 4 functions to simulate this movement model, and compare for the same level of noise, starting from $(0,0)$ the first time the distance to $(0,0)$ exceeds $25$,
+Write 2 functions to simulate this movement model, and compare for the same level of noise, starting from $(0,0)$ the first time the distance to $(0,0)$ exceeds $25$,
 
 Change the value of $\mu$ to measure its impact.
 
