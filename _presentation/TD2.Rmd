@@ -4,18 +4,19 @@ author: "Marie-Pierre Etienne"
 date: "October, 2023"
 output: 
   xaringan::moon_reader:
-  css: [  'metropolis', 'hygge', 'mpe_pres.css']
-lib_dir: libs
-nature:
-  highlightStyle: github
-highlightLines: true
-countIncrementalSlides: false
+    css: [  'metropolis', 'hygge', 'mpe_pres.css']
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
 ---
-  
-  ```{r setup, include=FALSE}
+
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 require(ggplot2)
 ```
+
 
 # Four classical movement models
 We denote by $X_k$ the position at time $t_k$ et $V_k$ the velocity.
